@@ -2,6 +2,7 @@
 
 void genArticle( char * name, int reference_id, float price, char size)
 {
+
 	FILE * file= fopen("./articles/articles.txt", "a");
 	if(file == NULL)
 	{

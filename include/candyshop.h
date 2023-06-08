@@ -1,6 +1,9 @@
 #ifndef CANDY_SHOP
 #define CANDY_SHOP
 
+//Custommer Macro
+#define SIZE_CUSTOMMERPATH 18
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -16,9 +19,9 @@ typedef struct Article
 
 typedef struct Custommer
 {
-	char * nom;
-	char * prenom;
-	//~ Article orderStory; Verify here 
+	char * name;
+	char * last_name;
+	//~ Article last_purchase;  
 	
 } Custommer;
 
@@ -27,5 +30,7 @@ typedef struct Custommer
 //article functions
 void genArticle( char * name, int reference_id, float price, char size);
 
+//Custommer functions
+void genCustommer( char * name, char * last_name /*,Article last_purchase*/);
 
 #endif

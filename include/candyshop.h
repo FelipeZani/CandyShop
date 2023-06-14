@@ -30,21 +30,20 @@ typedef struct Custommer
 
 typedef struct Shop
 {
-	int * nb_articles;
-	int * nb_custommers;
+	int nb_articles;
+	int nb_custommers;
 }Shop;
 
 //article functions
-void genArticle( char * name, int reference_id,int quantity, float price, char size);
-Article * uploadArticles(FILE farticles, Article * products, int nb_articles);
+void genArticle( char * name, char size, int reference_id,int quantity, float price);
+Article * uploadArticles(Article * products, int nb_articles);
 
 //Custommer functions
 void genCustommer( char * name, char * last_name);
 
 //shop functions
-void storeSetUp(Shop store);
-void management(int nb_artc);
-
+Shop * storeSetUp(Shop *store);
+void management(Shop * store);
 
 // Tools functions
 void IsAllocated(void *p1);

@@ -1,14 +1,16 @@
 #include "candyshop.h"
 
-void management(int nb_artc)
+void management(Shop * store)
 {
 	int i=0;
-	Article * products=malloc(sizeof(Article)*nb_articles);
-	FILE * f1=fopen("./articles/articles.txt", "r");
-	IsAllocated(f1);
-	IsAllocated(products);
-	products= uploadArticles(f1,products, nb_articles, nb_articles);
+	Article * products=malloc(sizeof(Article) * store->nb_articles);
+	Article * temp=malloc(sizeof(Article) * store->nb_articles);
 	
-	free(products);
-	fclose(f1);
+	IsAllocated(products);
+	products= uploadArticles(products, store->nb_articles);
+	
+	for(int i = 0; i<nb_)
+	
+	//~ free(products);
+	//~ fclose(f1);
 }

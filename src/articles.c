@@ -1,6 +1,6 @@
 #include "candyshop.h"
 
-void genArticle( char * name, int reference_id,int quantity, float price, char size)
+void genArticle( char * name, char size, int reference_id,int quantity, float price)
 {
 	FILE * file= fopen("./articles/articles.txt", "a");
 	if(file == NULL)
@@ -8,12 +8,14 @@ void genArticle( char * name, int reference_id,int quantity, float price, char s
 		printf("ERROR opening the file");
 		exit(-1);
 	}
-	fprintf(file, "%s %d %2.f %c \n", name, reference_id, price,size);
+	fprintf(file, "%s %c %d %d %f\n", name,size, reference_id,quantity, price);
 	fclose(file);
 }
 
-Article * uploadArticles(FILE farticles, Article * products, int nb_articles)
+Article * uploadArticles(Article * products, int nb_articles)
 {
+	FILE * farticles=fopen("./articles/articles.txt", "r");
+	IsAllocated(farticles);
 	int count=0;
 	
 	char buffer[100];
@@ -25,13 +27,13 @@ Article * uploadArticles(FILE farticles, Article * products, int nb_articles)
 		
 		IsAllocated(products+count);
 		
-		strcpy((products+count)->name,buffer)
+		strcpy((products+count)->name,buffer);
 		memset(buffer,0,strlen(buffer));
 		
-		fscanf(farticles, "%d %d %f %c",(products+count)->reference_ID, (products+count)->quantity, (products+count)->price, (products+count)->size);
+		fscanf(farticles," %c %d %d %f",&(products+count)->size,&products[count].reference_ID, &(products+count)->quantity, &(products+count)->price);
 		count++;
-		printf("%s", products[0].name);
 	}
+	
 	return products;
 }
 

@@ -1,57 +1,10 @@
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
-mini Peanut Butter 222989  4 S 
-Candies package 21321244  2 M 
-Sunkist Fruit Jam 12345678 23 B 
+Mini_Peanut_Butter S 222989 5 4
+Candies_package M 21321244 2 2
+Sunkist_Fruit_Jam B 12345678 8 23
+Strawberry_jam  B 145678 23 3
+Lolipop_package B 14678 23 1
+Mini_Peanut_Butter S 222989 5 3.500000
+Candies_package M 21321244 2 2.000000
+Sunkist_Fruit_Jam B 12345678 8 23.400000
+Strawberry_jam  B 145678 23 3.400000
+Lolipop_package B 14678 23 1.400000

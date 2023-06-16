@@ -44,6 +44,7 @@ void genCustommer( char * name, char * last_name);
 //shop functions
 Shop * storeSetUp(Shop *store);
 void management(Shop * store);
+void checkStock(Article * products,int nb_articles);
 
 // Tools functions
 void IsAllocated(void *p1);

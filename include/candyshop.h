@@ -30,6 +30,7 @@ typedef struct Custommer
 
 typedef struct Shop
 {
+	Article * products;
 	int nb_articles;
 	int nb_custommers;
 }Shop;

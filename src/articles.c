@@ -29,11 +29,14 @@ Article * uploadArticles(Article * products, int nb_articles)
 		
 		strcpy((products+count)->name,buffer);
 		memset(buffer,0,strlen(buffer));
-		
 		fscanf(farticles," %c %d %d %f",&(products+count)->size,&products[count].reference_ID, &(products+count)->quantity, &(products+count)->price);
 		count++;
 	}
 	
+	for(int i=0; i<nb_articles; i++)
+	{
+		strcpy(products[i].name,fixname(products[i].name,strlen(products[i].name),'_', ' '));
+	}
 	return products;
 }
 

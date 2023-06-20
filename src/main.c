@@ -5,6 +5,8 @@ Shop * storeSetUp(Shop *store)
 	store= malloc(sizeof(Shop));
 	store->nb_articles=NB_ARTICLES_BEGINNING;
 	store->nb_custommers=NB_CUSTOMMER_BEGINNING;
+	store->stockmax=#define MAX_STOCK;
+
 	
 	genArticle("Mini_Peanut_Butter",'S', 222989, 0,3.5);
 	genArticle("Candies_package", 'M',21321244,2, 2);
@@ -29,9 +31,9 @@ int main()
 	{
 		case 1:
 			management(store);
-
 			break;
 		case 2:
+			addArticle(store->products);
 			break;
 		default:
 			printf("option not valid, please try again");

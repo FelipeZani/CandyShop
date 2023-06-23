@@ -5,7 +5,7 @@ Shop * storeSetUp(Shop *store)
 	store= malloc(sizeof(Shop));
 	store->nb_articles=NB_ARTICLES_BEGINNING;
 	store->nb_custommers=NB_CUSTOMMER_BEGINNING;
-	store->stockmax=#define MAX_STOCK;
+	store->stockmax= MAX_STOCK;
 
 	
 	genArticle("Mini_Peanut_Butter",'S', 222989, 0,3.5);
@@ -25,15 +25,14 @@ int main()
 	
 	store = storeSetUp(store);
 	printf("Management mode or purchase mode"); // put security system here
-	scanf("%d", &input);
-	
+	scanf(" %d", &input);
+	cleanbuffer();
 	switch(input)
 	{
 		case 1:
 			management(store);
 			break;
 		case 2:
-			addArticle(store->products);
 			break;
 		default:
 			printf("option not valid, please try again");

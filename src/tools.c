@@ -44,3 +44,16 @@ int checkBufferFormat(char * buffer)
 	else
 		return 0;
 }
+
+int isInTheStore(char * buffer, Article * products,int nb_articles )
+{
+	int count = 0;
+	printf("%s", buffer);
+	while(count<nb_articles)
+	{
+		if(strcmp(products[count].name,buffer)==0)
+			return count;
+		count++;
+	}
+	return -1;
+}

@@ -37,21 +37,30 @@ typedef struct Shop
 	Article * products;
 	int nb_articles;
 	int nb_custommers;
+	int stockmax;
 }Shop;
 
 //article functions
 void genArticle( char * name, char size, int reference_id,int quantity, float price);
 Article * uploadArticles(Article * products, int nb_articles);
+void saveArticles(Article * products, int nb_articles);
 
 //Custommer functions
 void genCustommer( char * name, char * last_name);
 
 //shop functions
 Shop * storeSetUp(Shop *store);
+
+//management functions
 void management(Shop * store);
 void checkStock(Article * products,int nb_articles);
 int leaveresearch();
-void addArticle(Article * products,int nb_articles)
+void searchArticle(int nb_articles, Article * products);
+
+
+//Add articles function
+void addArticle(Article * products,int nb_articles, int maxItems);
+int isInTheStore(char * buffer, Article * product,int nb_articles );
 
 // Tools functions
 void IsAllocated(void *p1);

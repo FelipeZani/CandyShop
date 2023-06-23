@@ -39,4 +39,14 @@ Article * uploadArticles(Article * products, int nb_articles)
 	}
 	return products;
 }
-
+void saveArticles(Article * products, int nb_articles)
+{
+	FILE * file = fopen("/home/felipe/Documents/Dev/CandyShop/articles/articles.txt", "w");
+	IsAllocated(file);
+	
+	for(int i = 0;i<nb_articles;i++)
+	{
+		fprintf(file, "%s %c %d %d %f\n",products[i].name,products[i].size,products[i].reference_ID,products[i].quantity, products[i].price);
+	}
+	fclose(file);
+}

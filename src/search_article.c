@@ -15,10 +15,11 @@ void checkStock(Article * products,int nb_articles)
 		i++;
 	}
 }
-void searchArticle(int nb_articles, Article * products)//create a management fonct
+int searchArticle(int nb_articles, Article * products)
 {
 	int input=-1, found=0, on_off=1, idproduct=-1;
 	int toleave;
+	int index;
 	char buffer[MAX_LIMIT];
 	
 	while (on_off)
@@ -49,6 +50,7 @@ void searchArticle(int nb_articles, Article * products)//create a management fon
 					{
 						printf("\n product: %s quantity: %d",products[i].name,products[i].quantity);
 						found=1;
+						index=i;
 						
 					}
 				}
@@ -82,7 +84,7 @@ void searchArticle(int nb_articles, Article * products)//create a management fon
 				if(strcmp(buffer,products[i].name)==0)
 				{
 					printf("\n%s quantity:%d",products[i].name,products[i].quantity);
-					printf("\nWould you like to leave or search again 1) yes 2) no");
+					printf("\nWould you like the research 1) yes 2) no");
 					scanf("%d",&toleave);
 					found=1;
 					if(toleave==2)
@@ -94,13 +96,15 @@ void searchArticle(int nb_articles, Article * products)//create a management fon
 		}
 			input=-1,found=0;
 	}
+	return index;
 }
 
 int leaveresearch()
 {
 	int toleave;
-	printf("\nWould you like to leave or search again 1) yes 2) no");
+	printf("\nWould like to continue researching products: 1-yes 2-no");
 	scanf("%d",&toleave);
+
 	if(toleave==2)
 	{
 		return 0;

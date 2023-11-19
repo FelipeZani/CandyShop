@@ -4,11 +4,8 @@ void management(Shop * store)
 {
 	//create allocation fonction
 	int i=0, count=0, input;
-	store->products=malloc(sizeof(Article) * store->nb_articles);	
-	IsAllocated(store->products);
-	store->products= uploadArticles(store->products, store->nb_articles);
-	checkStock(store->products,store->nb_articles);
 
+	checkStock(store->products,store->nb_articles);
 	printf("Would you like to 1) search the stock of an article  2) Add new articles to the stock ");
 	scanf("%d", &input);
 	switch(input) 
@@ -39,7 +36,7 @@ void addArticle(Article * products,int nb_articles, int maxItems)
 		
 		if((index=isInTheStore(buffer, products, nb_articles))==-1)
 		{
-			printf("\nInvalid article name, input the name again");
+			printf("\nInvalid article name, only article's already present in the store can be added\ninput the name again");
 			memset(buffer,0,strlen(buffer));
 		}
 		else

@@ -27,8 +27,8 @@ typedef struct Article
 typedef struct Custommer
 {
 	char * name;
-	char * last_name;
-	//~ Article last_purchase;  
+	char * lastname;
+	Article * last_purchase;  
 	
 } Custommer;
 
@@ -47,6 +47,7 @@ void saveArticles(Article * products, int nb_articles);
 
 //Custommer functions
 void genCustommer( char * name, char * last_name);
+int checkCustommerInDB(char * nameInput);
 
 //shop functions
 Shop * storeSetUp(Shop *store);
@@ -55,7 +56,14 @@ Shop * storeSetUp(Shop *store);
 void management(Shop * store);
 void checkStock(Article * products,int nb_articles);
 int leaveresearch();
-void searchArticle(int nb_articles, Article * products);
+int searchArticle(int nb_articles, Article * products);
+
+
+//purchase functions
+void purchase(Shop * store);
+void signedIn(Shop * store);
+void purchaseItem(Custommer * custo,Shop * store, int index,int amountPurchased);
+void signup();
 
 
 //Add articles function
